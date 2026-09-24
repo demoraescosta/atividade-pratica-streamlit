@@ -60,7 +60,7 @@ with aba1:
         dados_agrupados = (
             df_filtrado
             .set_index('Data')
-            .resample('M')['Receita']
+            .resample('ME')['Receita']
             .sum()
         )
         dados_agrupados.index = dados_agrupados.index.strftime('%Y-%m')
